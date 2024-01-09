@@ -1,12 +1,43 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Input from '@/components/Input'
 import { FaGoogle, FaGithub } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 
 function auth() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const [variant, setVariant] = useState('login');
+
+  const router = useRouter();
+
+  const toogleVariant = useCallback(()=>{
+    setVariant((currentVariant)=>currentVariant==='login'? 'register':'login');
+  },[]);
+
+  const login = useCallback(async ()=>{
+    try {
+      console.log("login")
+      
+    } catch (error) {
+      
+    }
+
+  });
+  
+  const register = useCallback(async ()=>{
+    try {
+      console.log("register")
+      
+    } catch (error) {
+      
+    }
+
+  });
+
+
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-cover">
       <div className='bg-black h-full w-full bg-opacity-45'>
@@ -17,17 +48,26 @@ function auth() {
 
         <div className='flex justify-center'>
           <div className='bg-black bg-opacity-85 px-20 py-20 self-center mt-2 lg:w-2/5 rounded-xl w-full'>
-            <h2 className='text-white text-5xl mb-8 font-semibold'>Register</h2>
+            <h2 className='text-white text-5xl mb-8 font-semibold'>
+              {variant === 'login' ? 'Sign-in' : 'Register'}
+
+
+            </h2>
 
             <div className='flex flex-col gap-4'>
+              {variant == 'register' && (
 
-              <Input id='name'
-               value={name} 
-               label='username'
-               onChange={(e:any)=>setName(e.target.value)}
-               type='text'
-               
-               />
+                <Input id='name'
+                value={name} 
+                label='Fullname'
+                onChange={(e:any)=>setName(e.target.value)}
+                type='text'
+
+                />
+
+              )}
+
+            
                 <Input id='email'
                value={email} 
                label='Email Address'
@@ -46,9 +86,14 @@ function auth() {
 
 
             </div>
-            <button className='bg-red-700 py-3
+            <button onClick={variant === 'login' ? login :register} className='bg-red-700 py-3
              text-white hover:bg-red-800 transition
-            rounded-md w-full mt-10'>Sign up</button>
+            rounded-md w-full mt-10'>
+
+              {variant ==='login' ? 'Login': 'Sign up'}
+
+
+            </button>
 
             <div className='flex flex-row items-center gap-4 mt-10 justify-center'>
 
@@ -66,8 +111,12 @@ function auth() {
             </div>
             <p className='text-neutral-600 mt-12'>
 
-              Already have an account
-              <span className='text-white ml-2 cursor-pointer hover:underline transition'>Create an account </span>
+             {variant == 'login' ? 'First time using Netflix ?' :
+              'Allready have an account'}
+              <span onClick={toogleVariant}
+              className='text-white ml-2 cursor-pointer hover:underline transition'>
+               {variant ==='login' ? 'Create an account' : 'Login'}
+                 </span>
             </p>
             
 
