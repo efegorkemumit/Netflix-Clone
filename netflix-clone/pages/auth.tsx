@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Input from '@/components/Input'
 
 function auth() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-cover">
       <div className='bg-black h-full w-full bg-opacity-45'>
@@ -14,6 +19,14 @@ function auth() {
             <h2 className='text-white text-5xl mb-8 font-semibold'>Register</h2>
 
             <div className='flex flex-col gap-4'>
+
+              <Input id='name'
+               value={name} 
+               label='username'
+               onChange={(e:any)=>setName(e.target.value)}
+               type='text'
+               
+               />
 
 
             </div>
