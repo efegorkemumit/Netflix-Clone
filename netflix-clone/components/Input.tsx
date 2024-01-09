@@ -38,13 +38,14 @@ const Input: React.FC<InputProps>=({id,label, onChange,type,value})=> {
        scale-75
        -translate-y-1
        z-10
-       left-5
+       left-7
       text-zinc-400
       peer-placeholder-shown:scale-100
       peer-placeholder-shown:translate-y-0
       peer-focus:scale-75
       peer-focus:-translate-y-2
       duration-150
+      origin-[0]
       transform
       top-3'>{label}
       </label>

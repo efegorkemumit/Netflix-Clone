@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Input from '@/components/Input'
+import { FaGoogle, FaGithub } from 'react-icons/fa';
 
 function auth() {
 
@@ -27,10 +28,48 @@ function auth() {
                type='text'
                
                />
+                <Input id='email'
+               value={email} 
+               label='Email Address'
+               onChange={(e:any)=>setEmail(e.target.value)}
+               type='email'
+               
+               />
+
+              <Input id='password'
+               value={password} 
+               label='Password'
+               onChange={(e:any)=>setPassword(e.target.value)}
+               type='text'
+               
+               />
 
 
             </div>
+            <button className='bg-red-700 py-3
+             text-white hover:bg-red-800 transition
+            rounded-md w-full mt-10'>Sign up</button>
 
+            <div className='flex flex-row items-center gap-4 mt-10 justify-center'>
+
+              <div className='bg-white flex text-red-700 w-12 h-12 rounded-full items-center text-center cursor-pointer justify-center'>
+                <FaGoogle size={30}></FaGoogle>
+
+              </div>
+
+              <div className='bg-white flex text-black w-12 h-12 rounded-full items-center text-center cursor-pointer justify-center'>
+                <FaGithub size={30}></FaGithub>
+
+              </div>
+
+
+            </div>
+            <p className='text-neutral-600 mt-12'>
+
+              Already have an account
+              <span className='text-white ml-2 cursor-pointer hover:underline transition'>Create an account </span>
+            </p>
+            
 
           </div>
 
