@@ -39,6 +39,13 @@ export default function Home() {
     <>
       <Navbar></Navbar>
       <Billboard></Billboard>
+
+      <div className='h-72'>a</div>
+      <div className='h-72'>a</div>
+      <div className='h-72'>a</div>
+      <div className='h-72'>a</div>
+      <div className='h-72'>a</div>
+      <div className='h-72'>a</div>
         </>
   )
 }
