@@ -29,21 +29,21 @@ const  MovieList: React.FC<MovieListProps>=({data,title})=> {
          breakpoints={{
            640: {
              slidesPerView: 3,
-             spaceBetween: 20,
+             spaceBetween: 10,
            },
            768: {
              slidesPerView: 4,
-             spaceBetween: 40,
+             spaceBetween: 20,
            },
            1024: {
-             slidesPerView: 5,
-             spaceBetween: 50,
+             slidesPerView: 6,
+             spaceBetween: 20,
            },
          }}
-        className="mySwiper">
+        className="h-96 ">
 
          {data.map((movie)=>(
-            <SwiperSlide>
+            <SwiperSlide className='hover:scale-[5.7]'>
          <MovieCard data={movie} key={movie.id}></MovieCard>
          </SwiperSlide>
          ))}
