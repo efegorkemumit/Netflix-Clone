@@ -43,14 +43,15 @@ export default function Home() {
       <Navbar></Navbar>
       <Billboard></Billboard>
 
-      <MovieList title='Trending' data={movies}></MovieList>
+      <div className='lg:mt-44 sm:mt-5'>      </div>
 
-      <div className='h-72'>a</div>
-      <div className='h-72'>a</div>
-      <div className='h-72'>a</div>
-      <div className='h-72'>a</div>
-      <div className='h-72'>a</div>
-      <div className='h-72'>a</div>
-        </>
+        <div className='p-6'>
+      <MovieList title='Trending' data={movies}></MovieList>
+      </div>
+
+    
+
+      
+              </>
   )
 }
