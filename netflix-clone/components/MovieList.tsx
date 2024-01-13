@@ -40,7 +40,7 @@ const  MovieList: React.FC<MovieListProps>=({data,title})=> {
              spaceBetween: 20,
            },
          }}
-        className="h-96 ">
+        className="h-80 ">
 
          {data.map((movie)=>(
             <SwiperSlide className='hover:scale-[5.7]'>

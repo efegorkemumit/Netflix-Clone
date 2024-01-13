@@ -1,5 +1,6 @@
 import React from 'react'
 import { PlayIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
+import FavoriButtton from './FavoriButtton';
 
 interface MovieCartProp{
     data : MovieInterface;
@@ -40,7 +41,7 @@ const  MovieCard: React.FC<MovieCartProp>=({data})=> {
                 </div>
 
                 <div>
-                <PlayIcon className='text-black w-4 lg:w-6'></PlayIcon>
+                  <FavoriButtton movieId={data.id}></FavoriButtton>
 
                 </div>
 
@@ -58,12 +59,12 @@ const  MovieCard: React.FC<MovieCartProp>=({data})=> {
                 <span className='ml-2 text-white'>2024</span>
                 </p>
 
-                <div className='flex flex-row mt-4 gap-2 items-center'>
+                <div className='flex flex-row mt-2 gap-2 items-center'>
                     <p className='text-white text-sm'> {data.duration}</p>
 
                 </div>
 
-                <div className='flex flex-row mt-4 gap-2 items-center'>
+                <div className='flex flex-row mt-2 gap-2 items-center'>
                     <p className='text-white text-sm'> {data.genre}</p>
 
                 </div>

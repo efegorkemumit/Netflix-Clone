@@ -17,4 +17,4 @@ const useFavoriMovie = () =>{
     }
 };
 
-export default useMovieList
+export default useFavoriMovie

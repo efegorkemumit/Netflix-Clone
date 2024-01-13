@@ -1,6 +1,7 @@
 import serverAuth from "@/libs/serverAuth";
 import { NextApiRequest, NextApiResponse } from "next";
 import prismadb from '@/libs/prismadb'
+import {without} from 'lodash'
 
 
 export default async function handler (req : NextApiRequest, res: NextApiResponse){
@@ -16,7 +17,7 @@ export default async function handler (req : NextApiRequest, res: NextApiRespons
 
             const exitingMovie = await prismadb.movie.findUnique({
                 where : {
-                    id:movieId;
+                    id:movieId,
                 }
             });
 
@@ -48,7 +49,7 @@ export default async function handler (req : NextApiRequest, res: NextApiRespons
 
             const exitingMovie = await prismadb.movie.findUnique({
                 where : {
-                    id:movieId;
+                    id:movieId,
                 }
             });
 
@@ -62,7 +63,7 @@ export default async function handler (req : NextApiRequest, res: NextApiRespons
                 where : {
                     email: currentUser.email || '',
                 },
-                data{
+                data :{
                     favoriteIds : updateFavoriIds
                 }
 

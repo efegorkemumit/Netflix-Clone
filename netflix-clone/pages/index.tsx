@@ -9,6 +9,7 @@ import Navbar from '@/components/Navbar'
 import Billboard from '@/components/Billboard'
 import MovieList from '@/components/MovieList'
 import useMovieList from '@/hooks/useMovieList'
+import useFavoriMovie from '@/hooks/useFavorites'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +38,7 @@ export default function Home() {
 
   const {data:user} = useCurrentUser();
   const {data:movies} = useMovieList();
+  const {data:favoriMovie} = useFavoriMovie();
 
   return (
     <>
@@ -47,6 +49,9 @@ export default function Home() {
 
         <div className='p-6'>
       <MovieList title='Trending' data={movies}></MovieList>
+
+      <MovieList title='Favori List' data={favoriMovie}></MovieList>
+
       </div>
 
 <div className='h-96'></div>
