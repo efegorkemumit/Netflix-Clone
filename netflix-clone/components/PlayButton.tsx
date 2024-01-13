@@ -21,7 +21,7 @@ const PlayButton: React.FC<PlayButtonProps>=({movieId})=> {
     hover:bg-opacity-15
     transition' 
     onClick={()=>router.push(`/watch/${movieId}`)}>
-       <PlayIcon className='w-4 md:w-7 mr-2'></PlayIcon> Play
+       <PlayIcon className='w-4 md:w-5 lg:md-7 mr-2'></PlayIcon> Play
         </button>
   )
 }
