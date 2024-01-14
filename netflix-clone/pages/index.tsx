@@ -10,6 +10,8 @@ import Billboard from '@/components/Billboard'
 import MovieList from '@/components/MovieList'
 import useMovieList from '@/hooks/useMovieList'
 import useFavoriMovie from '@/hooks/useFavorites'
+import useInfoModalStore from '@/hooks/useInfoModalStore'
+import InfoModal from '@/components/InfoModal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,9 +41,12 @@ export default function Home() {
   const {data:user} = useCurrentUser();
   const {data:movies} = useMovieList();
   const {data:favoriMovie} = useFavoriMovie();
+  const {isOpen, closeModal} = useInfoModalStore();
 
   return (
     <>
+
+    <InfoModal visible={isOpen} onClose={closeModal}></InfoModal>
       <Navbar></Navbar>
       <Billboard></Billboard>
 
