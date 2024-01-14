@@ -1,10 +1,10 @@
 import React from 'react'
 
-interface mobilProp{
-    visible?:boolean
-}
+interface MobileMenuProps {
+    visible?: boolean;
+  }
 
-const MobileMenu: React.FC<mobilProp>= ({visible})=> {
+const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
     if(!visible){
 
         return null;

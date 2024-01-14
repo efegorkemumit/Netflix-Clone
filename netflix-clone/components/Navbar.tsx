@@ -39,10 +39,10 @@ function Navbar() {
 
     const toogleMobileMenu = useCallback(() => {
         setMobileMenu((current) => !current)
-    })
+    },[])
     const toogleAccountMenu = useCallback(() => {
         setAccountMenuItem((current) => !current)
-    })
+    },[])
     return (
         <nav className='w-full fixed z-20'>
             <div className={`px-4 py-6 flex flex-row transition  ${showBack ?'bg-zinc-950 bg-opacity-95' : ''}`}>
@@ -59,7 +59,7 @@ function Navbar() {
                     <p className='text-white cursor-pointer '>Browse</p>
                     <ChevronDownIcon className='w-5 text-white'>
                     </ChevronDownIcon>
-                    <MobileMenu visible={MobileMenuItem}> </MobileMenu>
+                    <MobileMenu visible={MobileMenuItem} />
 
                 </div>
                 <div className='flex flex-row ml-auto gap-7 items-center'>

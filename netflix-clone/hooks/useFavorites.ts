@@ -4,7 +4,7 @@ import useSWR from "swr";
 
 
 const useFavoriMovie = () =>{
-    const{data, error, isloading} =useSWR('/api/favorilist', fetcher,
+    const{data, error, isValidating} =useSWR('/api/favorilist', fetcher,
     {
         revalidateIfStale: false,
         revalidateOnFocus: false,
@@ -13,7 +13,7 @@ const useFavoriMovie = () =>{
     return{
         data,
         error,
-        isloading,
+        isValidating,
     }
 };
 

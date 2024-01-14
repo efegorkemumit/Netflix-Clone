@@ -4,7 +4,7 @@ import useSWR from "swr";
 
 
 const useMovie = (id? : string) =>{
-    const{data, error, isloading} =useSWR(id ? `/api/movie/${id}` : null, fetcher,
+    const{data, error, isValidating} =useSWR(id ? `/api/movie/${id}` : null, fetcher,
     {
         revalidateIfStale: false,
         revalidateOnFocus: false,
@@ -13,7 +13,7 @@ const useMovie = (id? : string) =>{
     return{
         data,
         error,
-        isloading,
+        isValidating,
     }
 };
 
