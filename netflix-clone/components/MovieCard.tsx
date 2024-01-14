@@ -3,6 +3,7 @@ import { PlayIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import FavoriButtton from './FavoriButtton';
 import { useRouter } from 'next/router';
 import useInfoModalStore from '@/hooks/useInfoModalStore';
+import { MovieInterface } from '@/types';
 
 interface MovieCartProp{
     data : MovieInterface;

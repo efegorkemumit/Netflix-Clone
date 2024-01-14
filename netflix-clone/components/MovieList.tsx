@@ -3,6 +3,7 @@ import {isEmpty} from 'lodash'
 import MovieCard from './MovieCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { MovieInterface } from '@/types';
 
 interface MovieListProps {
 
