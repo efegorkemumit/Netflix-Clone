@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { PlayIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 import FavoriButtton from './FavoriButtton';
+import { useRouter } from 'next/router';
 
 interface MovieCartProp{
     data : MovieInterface;
 }
 
 const  MovieCard: React.FC<MovieCartProp>=({data})=> {
+
+  const router = useRouter();
+
+  const redirectToWatch  = useCallback(()=> router.push(`/watch/${data.id}`), [router, data.id] )
   return (
     <div className='group bg-zinc-800 col-span-1 relative h-52'>
-        <img src={data.thumbnailUrl} 
+        <img onClick={redirectToWatch} src={data.thumbnailUrl} 
         className='h-52 
         w-full object-cover
         shadow-xl rounded-lg
@@ -18,7 +23,7 @@ const  MovieCard: React.FC<MovieCartProp>=({data})=> {
 
          <div className='opacity-0 w-full z-20 group-hover:opacity-100
          absolute top-0 scale-0 group-hover:scale-105 invisible sm:visible'>
-             <img src={data.thumbnailUrl}  className='h-36 
+             <img onClick={redirectToWatch} src={data.thumbnailUrl}  className='h-36 
                 w-full object-cover
                 shadow-xl rounded-lg
                 cursor-pointer' />
@@ -35,7 +40,7 @@ const  MovieCard: React.FC<MovieCartProp>=({data})=> {
                  cursor-pointer
                  border-white
                  hover:border-neutral-300'>
-                    <PlayIcon className='text-black w-4 lg:w-6'></PlayIcon>
+                    <PlayIcon onClick={redirectToWatch} className='text-black w-4 lg:w-6'></PlayIcon>
 
 
                 </div>
