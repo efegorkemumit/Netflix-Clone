@@ -1,5 +1,5 @@
 import React from 'react'
-import {isEmpty} from 'lodash'
+import { isEmpty } from 'lodash';
 import MovieCard from './MovieCard';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
