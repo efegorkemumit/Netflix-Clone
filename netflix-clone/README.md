@@ -1,3 +1,62 @@
+<a href="https://youtu.be/9DcOvsFNSwg" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/youtube/netflix.jpg" style="max-width: 10%;">
+</a>
+
+
+<a href="https://www.instagram.com/efegorkemumit/" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/iconss/instagram.png" style="max-width: 10%;">
+</a>
+
+<a href="https://efegorkemumit.com/" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/iconss/website.png" style="max-width: 10%;">
+</a>
+
+<a href="https://github.com/efegorkemumit" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/iconss/github.png" style="max-width: 10%;">
+</a>
+
+<a href="https://www.linkedin.com/in/efe-g%C3%B6rkem-%C3%BCmit-a084009b/" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/iconss/linkedin.png" style="max-width: 10%;">
+</a>
+
+<a href="https://www.youtube.com/@EfeGorkemUmit?sub_confirmation=1" rel="nofollow">
+<img src="https://efegorkemumit.github.io/assets/img/iconss/youtube.png" style="max-width: 10%;">
+</a>
+
+
+This is a repository for a Messenger Clone: 
+
+Messenger Clone | Full Stack |  React, Next Js  Prisma Pusher Js MongoDB TailwindCss  Vercel (2024)
+
+[VIDEO TUTORIAL] https://youtu.be/9DcOvsFNSwg
+
+
+
+# VIDEO TUTORIAL 
+Link :  https://youtu.be/9DcOvsFNSwg
+
+# Demo 
+Link :  https://netflix-clone-henna-eight.vercel.app/
+
+# İndirimli kupon linklerim için 
+
+Link : https://efegorkemumit.com/indirimli-udemy-kurs-kuponlarim/
+
+# Udemy Course Project Repository
+
+Welcome to the GitHub repository for the projects covered in the  on Udemy.
+
+## Udemy Course Details
+
+For in-depth details, lectures, and enrollment in the course, visit 
+
+## Project Previews
+
+
+Happy learning!
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
